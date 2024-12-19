@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function showThankYouMessage(event) {
-    event.preventDefault(); // Prevent the form from submitting the traditional way
+    event.preventDefault();
 
     const form = document.getElementById('contact-form');
     const formData = new FormData(form);
@@ -20,7 +20,7 @@ function showThankYouMessage(event) {
         return response.text();
     })
     .then(responseText => {
-        console.log('Form submission successful:', responseText); // Log the response from the server
+        console.log('Form submission successful:', responseText);
         document.getElementById('thank-you-modal').style.display = 'block';
         document.getElementById('thank-you-modal').querySelector('p').innerText = responseText;
     })
@@ -28,7 +28,7 @@ function showThankYouMessage(event) {
         console.error('There was a problem with your form submission:', error);
     });
 
-    return false; // Prevent the form from submitting the traditional way
+    return false;
 }
 
 function closeThankYouMessage() {
