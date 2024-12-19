@@ -32,4 +32,5 @@ function showThankYouMessage(event) {
 }
 
 function closeThankYouMessage() {
-    document.getElementById('
+    document.getElementById('thank-you-modal').style.display = 'none';
+}
