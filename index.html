@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nite Owl Digital</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" href="photos/logo-header.png" type="image/x-icon">
+  <script src="index.js" defer></script>
+  <meta name="description" content="A brief description of your page">
+  <meta name="keywords" content="HTML, CSS, JavaScript, tutorial">
+</head>
+<body>
+  <div class="contact-section">
+    <div class="contact-header-box">    
+      <h2 class="contact-me">Contact Me</h2>
+      <img src="photos/logo-header.png" class="header-logo">
+    </div>
+    <form id="contact-form" action="/.netlify/functions/submit-form" method="POST" data-netlify="true" onsubmit="return showThankYouMessage()">
+      <div class="form-group">
+        <div class="form-field">
+          <label for="first-name">First Name:</label>
+          <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+        </div>
+        <div class="form-field">
+          <label for="last-name">Last Name (Optional):</label>
+          <input type="text" id="last-name" name="last-name" placeholder="Last Name (Optional)">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-field">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="youremail@domain.com" required>
+        </div>
+        <div class="form-field">
+          <label for="phone">Phone Number (Optional):</label>
+          <input type="tel" id="phone" name="phone" placeholder="Phone Number (Optional)">
+        </div>
+      </div>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" placeholder="Briefly describe what services you wish to inquire about" required></textarea>
+      
+      <button type="submit">Send</button>
+    </form>
+    <p>Or email at <a href="mailto:Designs@niteowldigi.com">Designs@niteowldigi.com</a></p>
+  </div>
+
+  <div id="thank-you-modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close" onclick="closeThankYouMessage()">&times;</span>
+      <p>Thank you! Your message has been sent successfully.</p>
+    </div>
+  </div>
+</body>
+</html>
